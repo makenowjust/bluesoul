@@ -21,14 +21,15 @@ var Analyzer = &analysis.Analyzer{
 	},
 }
 
-const Doc = "bluesoul is duplicate article finder"
+const Doc = "bluesoul finds duplicate article (e.g. the the) in comment text"
 
 func run(pass *analysis.Pass) (interface{}, error) {
-	file := pass.Files[0]
-	for _, comment := range file.Comments {
-		text := comment.Text()
-		if reTheThe.MatchString(text) {
-			pass.Reportf(comment.Pos(), "duplicate article is found")
+	for _, file := range pass.Files {
+		for _, comment := range file.Comments {
+			text := comment.Text()
+			if reTheThe.MatchString(text) {
+				pass.Reportf(comment.Pos(), "duplicate article is found")
+			}
 		}
 	}
 
