@@ -1,11 +1,11 @@
 # bluesoul
 
-> `bluesoul` finds duplicate article (e.g. `the the`) in comment text.
+> `bluesoul` finds duplicate articles (e.g. `the the`) in comment text.
 
 ## Install
 
 ```console
-go get -u github.com/MakeNowJust/bluesoul
+go get -u github.com/MakeNowJust/bluesoul/cmd/bluesoul
 ```
 
 ## Usage
@@ -31,5 +31,6 @@ func main() {
     println("Hello, World")
 }
 $ go vet -vettool=$(which bluesoul) .
-./hello.go:1:1: duplicate article is found
+# github.com/MakeNowJust/bluesoul/hello
+./hello.go:1:10: duplicate articles: "the the"
 ```
