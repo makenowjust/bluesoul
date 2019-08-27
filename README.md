@@ -5,7 +5,7 @@
 ## Install
 
 ```console
-go get -u github.com/MakeNowJust/bluesoul/cmd/bluesoul
+$ go get -u github.com/MakeNowJust/bluesoul/cmd/bluesoul
 ```
 
 ## Usage
