@@ -11,7 +11,7 @@ var (
 	// Regular expression to match "the the"/"a a"/"an an".
 	// It can contains spaces, slash, asterisk, backslash and double quote between articles.
 	// Note that backslash and double quote are cheating for passing a test...
-	reTheThe = regexp.MustCompile(`\b(?:the|an?)[\s*/\\"]+(?:the|an?)\b`)
+	reTheThe = regexp.MustCompile(`(?i)\b(?:the|an?)[\s*/\\"]+(?:the|an?)\b`)
 	// Regular expression for cleaning up matched text.
 	reCleanup = regexp.MustCompile(`[\s*/\\"]+`)
 )

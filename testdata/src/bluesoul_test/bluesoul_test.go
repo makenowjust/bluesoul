@@ -1,6 +1,6 @@
 package bluesoul_test
 
-// the the main function // want `duplicate articles: "[t]he the"`
+// The the main function // want `duplicate articles: "[T]he the"`
 func main() {
 	// a a variable // want "duplicate articles: \"[a] a\""
 	var x string
